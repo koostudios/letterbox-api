@@ -1,6 +1,6 @@
 {
   "name": "letterbox-api",
-  "description": "Simple backend for forms",
+  "description": "A lightweight RESTful backend for supercharging online forms",
   "version": "0.0.1",
   "author": "Alexander Yuen <koo.studios@gmail.com> (http://www.koostudios.com)",
   "dependencies": {

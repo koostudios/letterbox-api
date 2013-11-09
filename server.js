@@ -2,6 +2,7 @@
  * letterbox v0.0.1
  */
 
+// Variables
 var package = require('./package.json'),
     restify = require('restify'),
     app = restify.createServer({
@@ -16,9 +17,11 @@ var package = require('./package.json'),
       raw: false
     }).database(config.db.database);
 
+// Configuration
 app.use(restify.bodyParser({mapParams:false}));
 app.use(restify.queryParser({mapParams:false}));
 
+// Routes
 app.get('/', function(req, res) {
   res.send(200, {welcome: package.name, version: package.version});
   return next();
@@ -42,8 +45,10 @@ app.post('/:user/:letterbox', function(req, res) {
   });
 });
 
+// Serve static files
 app.get(/\/?.*/, restify.serveStatic({
   directory: './public'
 }));
 
+// Start application
 app.listen(config.port);
