@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LetterBox Example</title>
+  <style>
+    body {width: 500px; margin: 0 auto; font-family: Helvetica, Arial, sans-serif;}
+    h1 {font-weight: 300;}
+    #letterbox-message {display: none; margin-bottom: 8px; background: #AADD44; padding: 8px; border-radius: 3px;}
+    #letterbox-message.error {background: #FF4444;}
+    input[type=text], textarea {display: block; width: 100%; margin-bottom: 8px; padding: 5px; font-size: 1em; border: 1px solid #CCC; border-radius: 3px; background: #FFF; box-sizing: border-box;}
+    input[type=submit] {display: block; padding: 8px 40px; border: 0px; border-bottom: 3px solid #202B39; border-radius: 3px; background: #334B6A; font-size: 1em; color: #FFF; font-weight: 300;}
+  </style>
+</head>
+<body>
+  <h1>LetterBox Example</h1>
+  <form id="letterbox">
+    <div id="letterbox-message"></div>
+    <input type="text" name="name" placeholder="Name">
+    <input type="text" name="email" placeholder="Email">
+    <textarea name="body" placeholder="Your message here."></textarea>
+    <input type="submit" value="Send">
+  </form>
+  <script>
+    (function(d,s,u,i,a,b){a=d.createElement(s),b=d.getElementsByTagName(s)[0];a.async=1;a.src=u;a.onload=function(){letterbox(i)};b.parentNode.insertBefore(a,b);})(document,'script','//localhost:3000/client.min.js','letterbox/example');
+  </script>
+</body>
+</html>
